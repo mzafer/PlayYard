@@ -14,6 +14,7 @@ object Application extends Controller {
     def getItem (id: String)= Action {
         val oid = new ObjectId(id);
         val testItem = TestItem.findOneById(oid)
+        Logger.debug("Date is "+testItem.get.date)
         Ok(TestItem.toCompactJson(testItem.get))
     }
     
