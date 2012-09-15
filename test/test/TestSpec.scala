@@ -24,8 +24,8 @@ class TestSpec extends Specification with Tags{
     	 // val decHooks = BSON.getDecodingHooks(classOf[java.util.Date])
     	 // println(decHooks.get(0).toString())
     	   	
-    	  //var testItem = TestItem(name="Test Item",date=Some(new Date()))
-    	  var testItem = TestItem(name="Test Item",date=Some(DateTime.now))
+    	  var testItem = TestItem(name="Test Item",date=Some(new Date()))
+    	  //var testItem = TestItem(name="Test Item",date=Some(DateTime.now))
 	      val jsonStr:String = TestItem.toCompactJson(testItem)  
 	      println(jsonStr)
 	      val newItem = TestItem.fromJSON(jsonStr) 

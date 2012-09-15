@@ -14,11 +14,11 @@ import java.util.Date
 case class TestItem(
 		@Key("_id") id: ObjectId = new ObjectId, 
         name:String,
-        date:Option[DateTime] = None
-        //date:Option[Date] = None
+        //date:Option[DateTime] = None
+        date:Option[Date] = None
        ) 
 
 object TestItem extends ModelCompanion[TestItem,ObjectId] {
   val collection = mongoCollection("TestItem")
   val dao = new SalatDAO[TestItem,ObjectId](collection = collection) {}
-}
+}	
