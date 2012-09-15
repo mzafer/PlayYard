@@ -15,6 +15,9 @@ local.properties
 .classpath
 .settings/
 .loadpath
+.target/
+target/
+logs/
 
 # External tool builders
 .externalToolBuilders/
